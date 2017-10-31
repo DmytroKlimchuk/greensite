@@ -1,12 +1,21 @@
+/* --- assets ---*/
+@import "../../assets/bootstrap.min.css";
+@import "../../assets/font-awesome.min.css";
+/* --- end assets ---*/
+
+
+/* --- Global styles ---*/
+@import "partials/colors";
+@import "partials/variable";
+@import "partials/fonts";
 /* --- Global styles ---*/
 
-@import "global/variable";
-@import "global/scaffolding";
-@import "global/grid";
-@import "global/outlines";
 
-/* --- end Global styles ---*/
+/* --- temporary styles ---*/
+@import "outlines";  // test grid
+/* --- end temporary styles ---*/
+
 
 /* --- pages styles ---*/
-
+@import "views/home";
 /* --- end pages styles ---*/
