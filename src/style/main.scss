@@ -1,10 +1,12 @@
-/*
-* Third Party
-*/
-@import "../../bower_components/normalize.css/normalize.css";
+/* --- Global styles ---*/
 
+@import "global/variable";
+@import "global/scaffolding";
+@import "global/grid";
+@import "global/outlines";
 
-/*
-* Custom
-*/
-@import "partials/variable";
+/* --- end Global styles ---*/
+
+/* --- pages styles ---*/
+
+/* --- end pages styles ---*/
