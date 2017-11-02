@@ -1,0 +1,61 @@
+body {
+  @include font(14px, $colorTextPrimary, 400, $font-regular);
+  max-width: 1920px;
+  min-width: 320px;
+}
+
+h1 {
+  @include font(36px, $colorHeaders, 700, $font-bold);
+}
+
+h2 {
+  @include font(36px, $colorHeaders, 400, $font-regular);
+}
+
+h3 {
+  @include font(30px, $colorHeaders, 400, $font-regular);
+}
+
+h4 {
+  @include font(28px, $colorHeaders, 400, $font-regular);
+}
+
+h5 {
+  @include font(25px, $colorHeaders, 400, $font-regular);
+}
+
+h6 {
+  @include font(24px, $colorHeaders, 700, $font-regular);
+}
+
+h1, h2, h3, h4, h5, h5 {
+  text-transform: uppercase;
+}
+
+p {
+  @include font(14px, $colorTextPrimary, 400, $font-light);
+  line-height: 24px;
+  margin: 24px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  position: relative;
+  @include font(14px, $colorTextPrimary, 400, $font-light);
+  line-height: 24px;
+  margin: 3px 0;
+}
+
+ul li::before {
+  content: "\f105";
+  position: absolute;
+  top: 0px;
+  left: -15px;
+  font-family: FontAwesome;
+  font-size: 14px;
+  font-weight: bold;
+  color: $bgColorSecondary;
+}
