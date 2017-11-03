@@ -1,0 +1,157 @@
+.container-fluid--darkgreen {
+  background-color: $bgColorPrimaryDark;
+}
+
+.top-info,
+.main-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.phone {
+  display: inline-block;
+}
+
+.phone__item {
+  display: inline-block;
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .phone__title {
+    display: inline-block;
+    @include font(18px, $colorTextInfo, $font-regular);
+    letter-spacing: 0.45px;
+    line-height: 51px;
+    padding-left: 50px;
+
+    &.phone__title--free {
+      background: url("../img/icon_phone.png") no-repeat 0 10px;
+    }
+    &.phone__title--now {
+      background: url("../img/icon_phone_2.png") no-repeat 0 10px;
+    }
+
+  }
+
+  a {
+    @include font(24px, $colorTextInfo, $font-regular);
+    letter-spacing: 0.6px;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+.social {
+  float: right;
+  margin-top: 9px;
+  margin-bottom: 12px;
+
+  &__title {
+    display: inline-block;
+    @include font(18px, $colorTextInfo, $font-regular);
+    line-height: 30px;
+    letter-spacing: 0.45px;
+    margin-right: 10px;
+  }
+
+  &__link {
+    box-shadow: 0 0 1px rgba(0,0,0,0.3);
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 12px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .fa {
+      color: $colorTextInfo;
+      line-height: 30px;
+      font-size: 14px;
+    }
+
+    &.social__link--pn {
+      background-color: $colorSocialPn;
+    }
+    &.social__link--tw {
+      background-color: $colorSocialTw;
+    }
+    &.social__link--fb {
+      background-color: $colorSocialFb;
+    }
+
+  }
+}
+
+.main-header {
+  padding-top: 18px;
+  padding-bottom: 11px;
+}
+
+.logo {
+  display: inline-block;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+}
+
+.menu {
+  display: inline-block;
+  float: right;
+  padding-top: 25px;
+
+  button {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 5px;
+
+      &::before {
+        display: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        border-bottom: 4px solid $bgColorSecondary;
+      }
+      a {
+        @include font(14px, $colorHeaders, 700, $font-bold);
+        text-transform: uppercase;
+        margin-top: 11px;
+        margin-bottom: 11px;
+        text-decoration: none;
+
+        &:hover {
+          color: $bgColorSecondary;
+          text-decoration: none;
+        }
+
+      }
+
+    }
+  }
+
+
+}
