@@ -3,10 +3,14 @@ $bgColorPrimaryDark: #14a85c;
 $bgColorPrimaryLight: #86ea8f;
 $bgColorPrimaryExtraLight: #35dc44;
 $bgColorPrimaryGrey: #4e4e4e;
+$bgColorSecondaryGrey: #ccd3dd;
 $bgColorSecondary: #e84c3d;
 $bgColorThird: #f6f6f6;
+$bgColorFour: #28c74e;
 $bgColorFaq: #eaedf2;
-
+$borderAdv: #ccc;
+$borderHow: #666;
+$borderHowDot: #f2c40e;
 /*------------- Text -------------------*/
 $colorHeaders: #003300;
 $colorTextDark: $bgColorPrimaryGrey;
@@ -21,6 +25,12 @@ $colorLabelLight: #242425;
 $colorPagination: #535155;
 $colorTextInfo: #fff;
 /*------------- end Text -------------------*/
+
+/*------------- btns -------------------*/
+$btnColorSecondary: #fab916;
+$btnBorderColor: #fff;
+$btnHoverBorderColor: #002157;
+/*------------- end btns -------------------*/
 
 /*------------- Social -------------------*/
 $colorSocialPn: $bgColorSecondary;

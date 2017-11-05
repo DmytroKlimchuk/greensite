@@ -10,6 +10,8 @@
 @import "partials/mixins";
 @import "partials/fonts";
 @import "partials/taxonomie";
+@import "partials/btns";
+@import "partials/scaffolding";
 /* --- Global styles ---*/
 
 
@@ -20,6 +22,8 @@
 
 /* --- pages styles ---*/
 @import "views/header";
+@import "views/intro";
 @import "views/main";
+@import "views/footer";
 /* --- end pages styles ---*/
 

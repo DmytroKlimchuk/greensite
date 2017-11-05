@@ -1,0 +1,214 @@
+.advantages__wrapper {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.advantage {
+  float: left;
+  min-height: 162px;
+  width: 32%;
+  margin-right: 1%;
+  margin-bottom: 11px;
+  padding-top: 97px;
+  padding-bottom: 5px;
+  border: 1px solid $borderAdv;
+  background-color: $bgColorPrimaryLight;
+  background-position: center 42px;
+  background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &--icon1 {
+    background-image: url("../img/icon1.png");
+    &:hover {
+      background-image: url("../img/icon1h.png");
+    }
+  }
+  &--icon2 {
+    background-image: url("../img/icon2.png");
+    &:hover {
+      background-image: url("../img/icon2h.png");
+    }
+  }
+  &--icon3 {
+    background-image: url("../img/icon3.png");
+    &:hover {
+      background-image: url("../img/icon3h.png");
+    }
+  }
+  &--icon4 {
+    background-image: url("../img/icon4.png");
+    &:hover {
+      background-image: url("../img/icon4h.png");
+    }
+  }
+  &--icon5 {
+    background-image: url("../img/icon5.png");
+    &:hover {
+      background-image: url("../img/icon5h.png");
+    }
+  }
+  &--icon6 {
+    background-image: url("../img/icon6.png");
+    &:hover {
+      background-image: url("../img/icon6h.png");
+    }
+  }
+  &::last-child{
+    margin-right: 0;
+  }
+  strong {
+    @include font(14px,$bgColorPrimaryGrey,400,$font-regular);
+    text-transform: uppercase;
+    line-height: 20px;
+  }
+
+  &:hover {
+    background-color: $bgColorSecondary;
+    border-color: $bgColorSecondary;
+
+    strong {
+      color: $colorTextInfo;
+    }
+  }
+}
+
+.article {
+  text-align: justify;
+
+  footer {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.article__body {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.how {
+  text-align: center;
+}
+
+.section-title {
+  display: inline-block;
+  @include font(36px, $colorTextInfo, $font-regular);
+  line-height: 40px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.how__wrapper {
+  text-align: left;
+  position: relative;
+  padding-bottom: 65px;
+}
+
+.how__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 35px;
+    width: 1px;
+    background-color: $borderHow;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 27px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid $borderHow;
+  }
+
+  p {
+    position: relative;
+    min-height: 70px;
+    padding-left: 90px;
+    padding-top: 15px;
+    @include font(16px, $bgColorPrimaryGrey, $font-regular);
+    line-height: 18px;
+    margin: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 69px;
+      height: 69px;
+      background-color: $bgColorSecondary;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid #ccc;
+    }
+  }
+
+  &--step1 {
+    p::before {
+      background-image: url('../img/how1.png');
+    }
+  }
+  &--step6 {
+    p::before {
+      background-image: url('../img/how6.png');
+    }
+  }
+  &--step2 {
+    p::before {
+      background-image: url('../img/how2.png');
+    }
+  }
+  &--step3 {
+    p::before {
+      background-image: url('../img/how3.png');
+    }
+  }
+  &--step4 {
+    p::before {
+      background-image: url('../img/how4.png');
+    }
+  }
+  &--step5 {
+    p::before {
+      background-image: url('../img/how5.png');
+    }
+  }
+}
+
+
+.row--first{
+  border-bottom: 1px dashed $borderHow;
+
+  .how__item {
+    padding-bottom: 65px;
+
+    &::after {
+      bottom: -7px;
+      background-color: $bgColorPrimaryDark;
+    }
+  }
+}
+
+.row--second{
+
+  .how__item {
+    padding-top: 65px;
+
+    &::after {
+      top: -7px;
+      background-color: $borderHowDot;
+    }
+  }
+
+}
+

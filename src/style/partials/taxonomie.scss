@@ -4,12 +4,29 @@ body {
   min-width: 320px;
 }
 
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
 h1 {
   @include font(36px, $colorHeaders, 700, $font-bold);
+  line-height: 40px;
+  margin: 50px 130px;
 }
 
 h2 {
   @include font(36px, $colorHeaders, 400, $font-regular);
+  line-height: 40px;
+  margin: 50px 0px;
+  text-align: center;
 }
 
 h3 {
@@ -29,13 +46,14 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h5 {
-  text-transform: uppercase;
+  text-align: center;
 }
 
 p {
   @include font(14px, $colorTextPrimary, 400, $font-light);
   line-height: 24px;
-  margin: 24px 0;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 ul {

@@ -1,0 +1,66 @@
+.btn {
+  border: 0;
+  outline: 0;
+  background: none;
+  display: inline-block;
+  position: relative;
+  padding: 16px 46px 16px 55px;
+  border-radius: 5px;
+  background-color: $bgColorPrimaryDark;
+  border: 1px solid $btnBorderColor;
+  @include font(18px, $colorTextInfo,$font-semibold);
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &::before {
+    content: "\f105";
+    position: absolute;
+    left: 41px;
+    top: 10px;
+    font-size: 26px;
+    font-family: $font-awesome;
+    font-weight: bold;
+  }
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+    color: $colorTextInfo;
+    background-color: $bgColorSecondary;
+  }
+  
+  &--red {
+    background-color: $bgColorSecondary;
+    font-family: $font-regular;
+    padding: 24px 73px;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $btnColorSecondary;
+      border-color: $btnHoverBorderColor;
+    }
+    
+  }
+
+  &--live-chat {
+    position: absolute;
+    left: 0;
+    background-image: url("../img/chat.png");
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+    padding-left: 80px;
+
+    &::before {
+      left: 66px;
+    }
+  }
+
+
+}
+
