@@ -18,8 +18,10 @@ body {
 
 h1 {
   @include font(36px, $colorHeaders, 700, $font-bold);
+  text-transform: uppercase;
   line-height: 40px;
-  margin: 50px 130px;
+  margin: 50px 0px;
+
 }
 
 h2 {
@@ -76,4 +78,10 @@ ul li::before {
   font-size: 14px;
   font-weight: bold;
   color: $bgColorSecondary;
+}
+
+@media (max-width: $only-mobile-width) {
+  ul {
+    padding-left: 20px;
+  }
 }

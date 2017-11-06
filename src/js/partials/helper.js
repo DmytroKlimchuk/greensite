@@ -24,3 +24,19 @@ window.onscroll = function() {
         nav_container.classList.remove('f-nav');
     }
 }
+
+
+var body = document.querySelector('body');
+var navMain = document.querySelector('.menu');
+var navOpen = document.querySelector('.btn-menu');
+
+body.classList.remove('nojs');
+
+navOpen.addEventListener('click', function(){
+    if ( navMain.classList.contains ('menu--opened')) {
+        navMain.classList.remove('menu--opened');
+    } else {
+        navMain.classList.add('menu--opened');
+    }
+});
+

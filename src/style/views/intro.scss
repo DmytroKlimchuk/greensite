@@ -1,49 +1,53 @@
 
 .container--intro {
   background-repeat: no-repeat;
-  background-image: url("../img/img_books_lamp.png"),
-  url("../img/img_boy.png"),
-  url("../img/light.png");
-  background-position: right bottom, left bottom, 360px 99%;
   margin-bottom: -5px;
   padding-bottom: 5px;
 }
 
 .intro {
-  padding-top: 68px;
+  padding-top: 20px;
   text-align: center;
   position: relative;
 
   &__title {
-    @include font(52px, $colorTextInfo, $font-bold);
-    line-height: 52px;
+    @include font(43px, $colorTextInfo, $font-bold);
+    line-height: 1;
     text-transform: uppercase;
     margin-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
 
   &__subtitle {
-    @include font(36px, $colorTextInfo, $font-semibold);
-    line-height: 36px;
+    @include font(24px, $colorTextInfo, $font-semibold);
+    line-height: 1;
     text-transform: uppercase;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
 }
 
 .order-info {
   text-align: left;
   padding-bottom: 54px;
-  margin-left: 330px;
-  margin-right: 300px;
   
   &__title {
+    display: none;
     text-transform: uppercase;
-    font-size: 29px;
   }
-  
+
+  p{
+    @include font(20px, $colorHeaders, $font-regular);
+    margin-right: 20%;
+    display: none;
+  }
 }
 
-.order-info p{
-  @include font(20px, $colorHeaders, $font-regular);
-  margin-right: 20%;
+.btn-wrapper {
+  text-align: center;
 }
 
 .special-offer {
@@ -68,6 +72,100 @@
       background-color: $bgColorSecondary;
     }
 
+  }
+
+}
+
+@media (max-width: $md-width) {
+  .container-fluid--ligtgreen {
+    background-repeat: no-repeat;
+    background-image: url("../img/lamp-l.png"),
+    url("../img/lamp-r.png");
+    background-position: left bottom, right bottom;
+  }
+}
+
+@media (min-width: $md-width) {
+  .container-fluid--intro {
+    padding-bottom: 50px;
+  }
+
+  .container--intro {
+    background-image: url("../img/img_books_lamp.png"),
+    url("../img/img_boy.png"),
+    url("../img/light.png");
+    background-position: right bottom, -20px bottom, 165px 99%;
+  }
+
+  .intro {
+    padding-top: 68px;
+
+    &__title {
+      font-size: 42px;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .order-info {
+    padding-bottom: 54px;
+    margin-left: 350px;
+    margin-right: 250px;
+
+    &__title {
+      display: block;
+      text-transform: uppercase;
+      font-size: 24px;
+    }
+    p {
+      display: block;
+    }
+  }
+
+  .btn-wrapper {
+    text-align: right;
+  }
+
+}
+
+@media (min-width: $lg-width) {
+
+  .container--intro {
+    background-image: url("../img/img_books_lamp.png"),
+    url("../img/img_boy.png"),
+    url("../img/light.png");
+    background-position: right bottom, left bottom, 360px 99%;
+  }
+
+  .intro {
+
+    &__title {
+      font-size: 52px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    &__subtitle {
+      margin-left: 0px;
+      margin-right: 0px;
+      font-size: 36px;
+      margin-bottom: 36px;
+    }
+  }
+
+
+  .order-info {
+    padding-bottom: 54px;
+    margin-left: 330px;
+    margin-right: 300px;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 29px;
+    }
   }
 
 }

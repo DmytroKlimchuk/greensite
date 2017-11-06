@@ -1,57 +1,47 @@
-.f-nav {
-  background-color: #fff;
-  z-index: 9999;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  transition: all 0.3s linear;
-}
-
 .top-info,
 .main-header {
   padding-left: 0;
   padding-right: 0;
+  position: relative;
 }
 
 .phone {
   display: inline-block;
-}
 
-.phone__item {
-  display: inline-block;
-  margin-right: 50px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  a {
-    @include font(24px, $colorTextInfo, $font-regular);
-    letter-spacing: 0.6px;
+  &__item {
     display: inline-block;
+    margin-right: 50px;
 
-    &:hover {
-      text-decoration: none;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @include font(16px, $colorTextInfo, $font-regular);
+      letter-spacing: 0.6px;
+      display: inline-block;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
-}
+  &__title {
+    display: inline-block;
+    @include font(14px, $colorTextInfo, $font-regular);
+    letter-spacing: 0.45px;
+    line-height: 51px;
+    padding-left: 50px;
 
-.phone__title {
-  display: inline-block;
-  @include font(18px, $colorTextInfo, $font-regular);
-  letter-spacing: 0.45px;
-  line-height: 51px;
-  padding-left: 50px;
+    &--free {
+      background: url("../img/icon_phone.png") no-repeat 0 10px;
+    }
+    &--now {
+      background: url("../img/icon_phone_2.png") no-repeat 0 10px;
+    }
 
-  &--free {
-    background: url("../img/icon_phone.png") no-repeat 0 10px;
   }
-  &--now {
-    background: url("../img/icon_phone_2.png") no-repeat 0 10px;
-  }
-
 }
 
 .social {
@@ -161,30 +151,51 @@
   display: inline-block;
 
   img {
-    height: 100%;
-    width: auto;
+    max-width: 200px;
+    height: auto;
+  }
+
+}
+
+.btn-menu {
+  display: inline-block;
+  background: none;
+  border: none;
+  outline: none;
+  width: 55px;
+  height: 35px;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  padding: 0;
+  z-index: 10;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    background-color: $colorHeaders;
+    width: 55px;
+    height: 7px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    box-shadow: 0 14px 0 0 $colorHeaders,
+    0 28px 0 0 $colorHeaders;
   }
 
 }
 
 .menu {
-  display: inline-block;
-  float: right;
-  padding-top: 25px;
-
-  button {
-    display: none;
-  }
+  display: none;
 
   &__list {
+    display: block;
     list-style-type: none;
     padding-left: 0;
-    margin: 0;
   }
 
   &__item {
-    display: inline-block;
-    margin-right: 5px;
+    display: block;
 
     &::before {
       display: none;
@@ -196,19 +207,178 @@
   }
 
   &__link {
+    display: block;
     transition: all 0.2s linear;
-    @include font(14px, $colorHeaders, 700, $font-bold);
+    @include font(18px, $colorHeaders, 700, $font-bold);
+    background-color: $bgColorPrimaryLight;
+    line-height: 24px;
     text-transform: uppercase;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-decoration: none;
+    text-align: center;
 
     &:hover {
       color: $bgColorSecondary;
-      border-bottom: 4px solid $bgColorSecondary;
       text-decoration: none;
     }
 
+  }
+
+}
+
+
+
+@media (max-width: $only-mobile-width) {
+
+  h2 {
+    margin: 50px 0px 30px;
+  }
+  .menu--opened {
+    display: block;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .nojs .menu{
+    display: block !important;
+  }
+
+  .nojs .btn-menu-close{
+    display: none;
+  }
+
+  .nojs .btn-menu{
+    display: none;
+  }
+
+  .menu {
+    transition: all 0.3s linear;
+  }
+
+}
+
+@media (min-width: $sm-width) {
+
+
+}
+
+@media (min-width: $md-width) {
+
+  .btn-menu,
+  .btn-menu-close {
+    display: none;
+  }
+
+  .phone {
+    &__item {
+      margin-right: 20px;
+
+      a {
+        font-size: 20px;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 51px;
+      padding-left: 50px;
+    }
+  }
+
+  .logo {
+    img {
+      width: 160px;
+    }
+  }
+
+  .menu {
+    display: inline-block;
+    float: right;
+    padding-top: 8px;
+
+    &__list {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    &__item {
+      display: inline-block;
+      margin-right: 5px;
+
+      &::before {
+        display: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      transition: all 0.2s linear;
+      background-color: transparent;
+      @include font(12px, $colorHeaders, 700, $font-bold);
+      line-height: 1;
+      text-transform: uppercase;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      text-decoration: none;
+
+      &:hover {
+        color: $bgColorSecondary;
+        border-bottom: 4px solid $bgColorSecondary;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $lg-width) {
+
+  .f-nav {
+    background-color: #fff;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s linear;
+  }
+
+
+  .phone {
+    &__item {
+      margin-right: 50px;
+
+      a {
+        font-size: 24px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 51px;
+      padding-left: 50px;
+    }
+  }
+
+  .logo {
+    img {
+      width: 241px;
+    }
+  }
+
+  .menu {
+    padding-top: 25px;
+  }
+
+  .menu__link {
+    font-size: 14px;
   }
 
 }

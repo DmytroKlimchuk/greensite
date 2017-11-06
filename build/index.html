@@ -10,25 +10,25 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
-<body class="">
+<body class="nojs">
 
 <header class="page-header">
     <div class="container-fluid container-fluid--darkgreen">
         <div class="container top-info">
-            <div class="row hidden-sm hidden-xs">
-                <div class="col-md-9">
+            <div class="row hidden-xs">
+                <div class="col-sm-7 col-md-9">
                     <div class="phone">
                         <div class="phone__item">
                             <span class="phone__title phone__title--free">Call for free:</span>
                             <a href="tel:+1-(044)-147-0235">+1-(044)-147-0235</a>
                         </div>
-                        <div class="phone__item">
+                        <div class="phone__item hidden-sm">
                             <span class="phone__title phone__title--now">Call now:</span>
                             <a href="tel:+1-(044)-147-0336">+1-(044)-147-0336</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-5 col-md-3">
                     <div class="social">
                         <span class="social__title">Join us:</span>
                         <a href="#" class="social__link social__link--pn"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -43,9 +43,8 @@
     <div class="container-fluid nav-container">
         <div class="container main-header">
             <a href="/" class="logo"><img src="img/logo.png" alt="крутой логотип Greensite"></a>
+            <button class="btn-menu" type="button"></button>
             <nav class="menu">
-                <button class="btn-menu" type="button"></button>
-                <button class="btn-menu-close" type="button"></button>
                 <ul class="menu__list">
                     <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">ABOUT</a></li>
@@ -68,21 +67,21 @@
     <div class="container-fluid container-fluid--border container-fluid--ligtgreen">
         <div class="container container--intro">
             <div class="intro clearfix">
-                <a href="#" class="btn btn--live-chat">live chat</a>
+                <a href="#" class="btn btn--live-chat visible-lg">live chat</a>
                 <p class="intro__title">Custom Writing service</p>
                 <p class="intro__subtitle">the key to success </p>
                 <div class="order-info">
                     <p class="order-info__title">You are at right place!</p>
                     <p class="order-info__descr">EssayService.com is a top quality
                         writing service</p>
-                    <div class="align-right">
+                    <div class="btn-wrapper">
                         <a href="#" class="btn btn--red">Order now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container hidden-xs hidden-sm">
         <div class="special-offer">
             <span>Special Offer: <strong>Get limited discounts</strong> on the first order</span>
             <a href="#">The list of discounts</a>
@@ -95,26 +94,28 @@
         <div class="container">
             <section class="advantages">
                 <h2>Our Advantages</h2>
-                <div class="advantages__wrapper">
-                    <div class="advantage advantage--icon1">
+                <button class="arrow prev  visible-xs visible-sm"><i class="fa fa-angle-left"></i></button>
+                <ul class="advantages__wrapper rslides">
+                    <li class="advantage advantage--icon1">
                         <strong>any academic level</strong>
-                    </div>
-                    <div class="advantage advantage--icon2">
+                    </li>
+                    <li class="advantage advantage--icon2">
                         <strong>Over 300 words per page</strong>
-                    </div>
-                    <div class="advantage advantage--icon3">
+                    </li>
+                    <li class="advantage advantage--icon3">
                         <strong>Free plagiarism report</strong>
-                    </div>
-                    <div class="advantage advantage--icon4">
+                    </li>
+                    <li class="advantage advantage--icon4">
                         <strong>20% off your first order</strong>
-                    </div>
-                    <div class="advantage advantage--icon5">
+                    </li>
+                    <li class="advantage advantage--icon5">
                         <strong>Direct communication with the writer</strong>
-                    </div>
-                    <div class="advantage advantage--icon6">
+                    </li>
+                    <li class="advantage advantage--icon6">
                         <strong>Flexible discount program</strong>
-                    </div>
-                </div>
+                    </li>
+                </ul>
+                <button class="arrow next visible-xs visible-sm"><i class="fa fa-angle-right"></i></button>
             </section>
         </div>
     </div>
@@ -123,7 +124,7 @@
         <div class="container">
             <article class="article">
                 <header>
-                    <h1>COMPANYNAME.com has come forward to provide you with high quality papers{h1}</h1>
+                    <h1>COMPANY NAME has come forward to provide you with high quality papers{h1}</h1>
                 </header>
                 <div class="article__body">
                     <p>Student years are the best time of one’s life. You are in the prime of your life and hopeful about the bright future ahead. This is the period that leaves the funniest photos, the sweetest memories, and gives you the most faithful friends. However, there is one thing that spoils all the fun – assignment writing. <br>Have you ever struggled to write an essay or prepare a speech only to find that the deadline is getting closer, and the work is not ready yet? Are you desperate for someone to have your paper done? Ordering it online is a really convenient option, but you must be sure that the final product is worth the price. <br>EssaysService.com is one of the leading online writing centers that deliver only premium quality essays, term papers, and research papers.
@@ -208,7 +209,7 @@
 
                     <section class="article">
                         <header>
-                            <h2>{h2}CompanyName.com is the best Essay Writing Service</h2>
+                            <h2>{h2} Company Name  is the best Essay Writing Service</h2>
                         </header>
                         <div>
                             <p>The final product will meet all your specifications regarding the content and formatting style. What is more, you will not have to proofread it for any grammatical or spelling errors, because our professionals have a really good command of the English language.<br>
@@ -227,11 +228,30 @@
     </div>
 </main>
 
+
+<script>
+    $(function() {
+        $(".rslides").responsiveSlides({
+            auto: true,             // Анимация автоматически, true или false
+            speed: 500,            // Скорость смены
+            timeout: 1000,          // Время между переходами
+            pager: false,           // Показывать нумерацию слайдов
+            nav: false,             // Показывать навигацию, true или false
+            random: false,          // Случайный показ слайдов true или false
+            pause: false,           // Пауза при наведении true или false
+            pauseControls: false,    // Пауза при наведении на кнопки навигации
+            prevText: "Previous",   // Текст кнопки "Назад"
+            nextText: "Next",       // Текст кнопки "Следующий"
+            namespace: "rslides"   // класс слайдера
+        });
+    });
+</script>
+
 <footer class="page-footer">
-    <div class="container-fluid container-fluid--darkgreen">
+    <div class="container-fluid container-fluid--darkgreen  hidden-sm hidden-xs">
         <div class="container">
             <div class="row top-footer">
-                <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="col-md-4 col-lg-3">
                     <div class="footer-logo">
                         <img src="img/logo2.png" alt="Лого">
                     </div>
@@ -250,7 +270,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-9  hidden-sm hidden-xs">
+                <div class="col-md-8 col-lg-9  hidden-sm hidden-xs">
                     <div class="keywords">
                         <div class="keywords__body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
@@ -270,7 +290,7 @@
         <div class="container">
             <div class="sub-footer">
                 <div class="row"></div>
-                    <div class="col-md-3 hidden-sm hidden-xs">
+                    <div class="col-md-4 col-lg-3 hidden-sm hidden-xs">
                         <div class="social">
                             <span class="social__title">Join us:</span>
                             <a href="#" class="social__link social__link--pn"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -278,7 +298,7 @@
                             <a href="#" class="social__link social__link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-9 col-xs-12">
+                    <div class="col-md-8 col-lg-9 col-xs-12">
                         <p class="copyright">
                             Copyright © 2016 CompanyName.com
                         </p>

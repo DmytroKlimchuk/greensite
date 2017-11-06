@@ -4,7 +4,7 @@
   background: none;
   display: inline-block;
   position: relative;
-  padding: 16px 46px 16px 55px;
+  padding: 13px 30px 13px 39px;
   border-radius: 5px;
   background-color: $bgColorPrimaryDark;
   border: 1px solid $btnBorderColor;
@@ -18,9 +18,9 @@
   &::before {
     content: "\f105";
     position: absolute;
-    left: 41px;
-    top: 10px;
-    font-size: 26px;
+    left: 25px;
+    top: 8px;
+    font-size: 22px;
     font-family: $font-awesome;
     font-weight: bold;
   }
@@ -34,7 +34,7 @@
   &--red {
     background-color: $bgColorSecondary;
     font-family: $font-regular;
-    padding: 24px 73px;
+    padding: 20px 45px;
 
     &::before {
       display: none;
@@ -61,6 +61,65 @@
     }
   }
 
+}
+
+
+@media (min-width: $sm-width) {
+
+}
+
+@media (min-width: $md-width) {
+  .btn {
+    padding: 13px 36px 13px 45px;
+    font-size: 16px;
+
+    &::before {
+      left: 31px;
+      top: 9px;
+      font-size: 22px;
+    }
+
+    &--red {
+      padding: 22px 55px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+}
+
+@media (min-width: $lg-width) {
+
+  .btn {
+    padding: 16px 46px 16px 55px;
+    font-size: 18px;
+
+    &::before {
+      left: 41px;
+      top: 10px;
+      font-size: 26px;
+    }
+
+    &--red {
+      padding: 24px 73px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--live-chat {
+      padding-left: 80px;
+      padding-right: 15px;
+
+      &::before {
+        left: 66px;
+      }
+    }
+
+  }
 
 }
 

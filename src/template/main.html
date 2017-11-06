@@ -3,26 +3,28 @@
         <div class="container">
             <section class="advantages">
                 <h2>Our Advantages</h2>
-                <div class="advantages__wrapper">
-                    <div class="advantage advantage--icon1">
+                <button class="arrow prev  visible-xs visible-sm"><i class="fa fa-angle-left"></i></button>
+                <ul class="advantages__wrapper rslides">
+                    <li class="advantage advantage--icon1">
                         <strong>any academic level</strong>
-                    </div>
-                    <div class="advantage advantage--icon2">
+                    </li>
+                    <li class="advantage advantage--icon2">
                         <strong>Over 300 words per page</strong>
-                    </div>
-                    <div class="advantage advantage--icon3">
+                    </li>
+                    <li class="advantage advantage--icon3">
                         <strong>Free plagiarism report</strong>
-                    </div>
-                    <div class="advantage advantage--icon4">
+                    </li>
+                    <li class="advantage advantage--icon4">
                         <strong>20% off your first order</strong>
-                    </div>
-                    <div class="advantage advantage--icon5">
+                    </li>
+                    <li class="advantage advantage--icon5">
                         <strong>Direct communication with the writer</strong>
-                    </div>
-                    <div class="advantage advantage--icon6">
+                    </li>
+                    <li class="advantage advantage--icon6">
                         <strong>Flexible discount program</strong>
-                    </div>
-                </div>
+                    </li>
+                </ul>
+                <button class="arrow next visible-xs visible-sm"><i class="fa fa-angle-right"></i></button>
             </section>
         </div>
     </div>
@@ -31,7 +33,7 @@
         <div class="container">
             <article class="article">
                 <header>
-                    <h1>COMPANYNAME.com has come forward to provide you with high quality papers{h1}</h1>
+                    <h1>COMPANY NAME has come forward to provide you with high quality papers{h1}</h1>
                 </header>
                 <div class="article__body">
                     <p>Student years are the best time of one’s life. You are in the prime of your life and hopeful about the bright future ahead. This is the period that leaves the funniest photos, the sweetest memories, and gives you the most faithful friends. However, there is one thing that spoils all the fun – assignment writing. <br>Have you ever struggled to write an essay or prepare a speech only to find that the deadline is getting closer, and the work is not ready yet? Are you desperate for someone to have your paper done? Ordering it online is a really convenient option, but you must be sure that the final product is worth the price. <br>EssaysService.com is one of the leading online writing centers that deliver only premium quality essays, term papers, and research papers.
@@ -116,7 +118,7 @@
 
                     <section class="article">
                         <header>
-                            <h2>{h2}CompanyName.com is the best Essay Writing Service</h2>
+                            <h2>{h2} Company Name  is the best Essay Writing Service</h2>
                         </header>
                         <div>
                             <p>The final product will meet all your specifications regarding the content and formatting style. What is more, you will not have to proofread it for any grammatical or spelling errors, because our professionals have a really good command of the English language.<br>
@@ -134,3 +136,22 @@
         </div>
     </div>
 </main>
+
+
+<script>
+    $(function() {
+        $(".rslides").responsiveSlides({
+            auto: true,             // Анимация автоматически, true или false
+            speed: 500,            // Скорость смены
+            timeout: 1000,          // Время между переходами
+            pager: false,           // Показывать нумерацию слайдов
+            nav: false,             // Показывать навигацию, true или false
+            random: false,          // Случайный показ слайдов true или false
+            pause: false,           // Пауза при наведении true или false
+            pauseControls: false,    // Пауза при наведении на кнопки навигации
+            prevText: "Previous",   // Текст кнопки "Назад"
+            nextText: "Next",       // Текст кнопки "Следующий"
+            namespace: "rslides"   // класс слайдера
+        });
+    });
+</script>
