@@ -12,28 +12,35 @@
   border: 1px solid $borderAdv;
   background-color: $bgColorPrimaryLight;
   text-align: center;
+  position: relative;
 
   &::before {
-    display: none;
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  &--icon1 {
-    background-image: url("../img/icon1.png");
+  &:hover {
+    text-decoration: none;
   }
-  &--icon2 {
-    background-image: url("../img/icon2.png");
+  &--icon1::before {
+    @include sprite($s-icon1);
   }
-  &--icon3 {
-    background-image: url("../img/icon3.png");
+  &--icon2::before {
+    @include sprite($s-icon2);
   }
-  &--icon4 {
-    background-image: url("../img/icon4.png");
+  &--icon3::before {
+    @include sprite($s-icon3);
   }
-  &--icon5 {
-    background-image: url("../img/icon5.png");
+  &--icon4::before {
+    @include sprite($s-icon4);
   }
-  &--icon6 {
-    background-image: url("../img/icon6.png");
+  &--icon5::before {
+    @include sprite($s-icon5);
+  }
+  &--icon6::before {
+    @include sprite($s-icon6);
   }
 
   &::last-child{
@@ -99,6 +106,33 @@
     border: 1px solid $borderHow;
   }
 
+  &--step1 {
+    p::before {
+      @include sprite($s-how1);
+    }
+  }
+  &--step2 {
+    p::before {
+      @include sprite($s-how2);
+    }
+  }
+  &--step3 {
+    p::before {
+      @include sprite($s-how3);
+    }
+  }
+  &--step4 {
+    p::before {
+      @include sprite($s-how4);
+    }
+  }
+  &--step5 {
+    p::before {
+      @include sprite($s-how5);
+    }
+  }
+
+
   p {
     position: relative;
     min-height: 70px;
@@ -108,7 +142,7 @@
     line-height: 18px;
     margin: 0;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -116,42 +150,19 @@
       width: 69px;
       height: 69px;
       background-color: $bgColorSecondary;
-      background-repeat: no-repeat;
-      background-position: center center;
       border: 1px solid #ccc;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 35px;
+      transform: translateX(-50%);
+      z-index: 2;
     }
   }
 
-  &--step1 {
-    p::before {
-      background-image: url('../img/how1.png');
-    }
-  }
-  &--step6 {
-    p::before {
-      background-image: url('../img/how6.png');
-    }
-  }
-  &--step2 {
-    p::before {
-      background-image: url('../img/how2.png');
-    }
-  }
-  &--step3 {
-    p::before {
-      background-image: url('../img/how3.png');
-    }
-  }
-  &--step4 {
-    p::before {
-      background-image: url('../img/how4.png');
-    }
-  }
-  &--step5 {
-    p::before {
-      background-image: url('../img/how5.png');
-    }
-  }
 }
 
 
@@ -299,27 +310,25 @@
     width: 32%;
     margin-right: 1%;
     margin-bottom: 11px;
-    cursor: pointer;
     transition: all 0.3s linear;
-    background-position: center 42px;
 
-    &--icon1:hover {
-        background-image: url("../img/icon1h.png");
+    &--icon1:hover::before {
+      @include sprite($s-icon1h);
     }
-    &--icon2:hover {
-        background-image: url("../img/icon2h.png");
+    &--icon2:hover::before{
+      @include sprite($s-icon2h);
     }
-    &--icon3:hover {
-        background-image: url("../img/icon3h.png");
+    &--icon3:hover::before{
+      @include sprite($s-icon3h);
     }
-    &--icon4:hover {
-        background-image: url("../img/icon4h.png");
+    &--icon4:hover::before {
+      @include sprite($s-icon4h);
     }
-    &--icon5:hover {
-        background-image: url("../img/icon5h.png");
+    &--icon5:hover::before {
+      @include sprite($s-icon5h);
     }
-    &--icon6:hover {
-        background-image: url("../img/icon6h.png");
+    &--icon6:hover::before {
+      @include sprite($s-icon6h);
     }
 
     &:hover {

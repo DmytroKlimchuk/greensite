@@ -28,7 +28,6 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
-        sprite: 'src/img/',
         fonts: 'build/fonts/'
     },
     src: { //Пути исходников
@@ -70,7 +69,6 @@ gulp.task('html:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
-
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
@@ -82,15 +80,22 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('sprite:build', function () {
+    var fileName = 'sprite';
     var spriteData = gulp.src(path.src.sprite).pipe(spritesmith({
-        imgName: 'sprite.png',
-        cssName: 'sprite.scss',
+        imgName: fileName + '.png',
+        cssName: fileName + '.scss',
+        cssFormat: 'scss',
         algorithm: 'top-down',
-        padding: 500
+        padding: 100,
+        imgPath: '../img/' + fileName + '.png',
+        cssTemplate: 'scss.template.mustache',
+        cssVarMap: function(sprite) {
+            sprite.name = 's-' + sprite.name
+        }
     }));
 
-    spriteData.img.pipe(gulp.dest(path.build.sprite)); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('./src/style/')); // путь, куда сохраняем стили
+    spriteData.img.pipe(gulp.dest('./src/img/')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('./src/style/partials/')); // путь, куда сохраняем стили
 });
 
 gulp.task('style:build', function () {
@@ -132,12 +137,12 @@ gulp.task('fonts:build', function() {
 
 
 gulp.task('build', [
+    'sprite:build',
+    'fonts:build',
+    'image:build',
     'html:build',
     'js:build',
-    'sprite:build',
-    'style:build',
-    'fonts:build',
-    'image:build'
+    'style:build'
 ]);
 
 // end --------- СБОРКА -------------------

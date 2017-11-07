@@ -32,13 +32,14 @@
     @include font(14px, $colorTextInfo, $font-regular);
     letter-spacing: 0.45px;
     line-height: 51px;
-    padding-left: 50px;
 
-    &--free {
-      background: url("../img/icon_phone.png") no-repeat 0 10px;
+    &--free::before {
+      content: '';
+      @include sprite($s-toll);
     }
-    &--now {
-      background: url("../img/icon_phone_2.png") no-repeat 0 10px;
+    &--now::before {
+      content: '';
+      @include sprite($s-call);
     }
 
   }
@@ -272,7 +273,7 @@
 
   .phone {
     &__item {
-      margin-right: 20px;
+      margin-right: 10px;
 
       a {
         font-size: 20px;
@@ -282,7 +283,6 @@
     &__title {
       font-size: 16px;
       line-height: 51px;
-      padding-left: 50px;
     }
   }
 
@@ -363,7 +363,6 @@
     &__title {
       font-size: 18px;
       line-height: 51px;
-      padding-left: 50px;
     }
   }
 

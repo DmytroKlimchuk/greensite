@@ -1,5 +1,4 @@
 .btn {
-  border: 0;
   outline: 0;
   background: none;
   display: inline-block;
@@ -50,14 +49,18 @@
   &--live-chat {
     position: absolute;
     left: 0;
-    background-image: url("../img/chat.png");
-    background-position: 15px center;
-    background-repeat: no-repeat;
     padding-right: 15px;
     padding-left: 80px;
 
     &::before {
       left: 66px;
+    }
+    &::after {
+      content: '';
+      @include sprite($s-chat);
+      position: absolute;
+      left: 15px;
+      top: 8px;
     }
   }
 
