@@ -17,7 +17,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    spritesmith = require('gulp.spritesmith');
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV  == 'development';
 
@@ -27,20 +28,23 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
+        sprite: 'src/img/',
         fonts: 'build/fonts/'
     },
     src: { //Пути исходников
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'src/style/main.scss',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: 'src/img/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        sprite: 'src/img/icons/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: { // за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/img/*.*',
+        sprite: 'src/img/icons/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
@@ -75,6 +79,18 @@ gulp.task('js:build', function () {
         //.pipe(gulpIf(isDev, sourcemaps.write())) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+
+gulp.task('sprite:build', function () {
+    var spriteData = gulp.src(path.src.sprite).pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: 'sprite.scss',
+        algorithm: 'top-down',
+        padding: 500
+    }));
+
+    spriteData.img.pipe(gulp.dest(path.build.sprite)); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('./src/style/')); // путь, куда сохраняем стили
 });
 
 gulp.task('style:build', function () {
@@ -114,9 +130,11 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.build.fonts))
 });
 
+
 gulp.task('build', [
     'html:build',
     'js:build',
+    'sprite:build',
     'style:build',
     'fonts:build',
     'image:build'
@@ -139,6 +157,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch([path.watch.sprite], function(event, cb) {
+        gulp.start('sprite:build');
     });
 });
 
