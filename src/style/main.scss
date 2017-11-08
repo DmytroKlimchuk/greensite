@@ -13,6 +13,7 @@
 @import "partials/taxonomie";
 @import "partials/carousel";
 @import "partials/btns";
+@import "partials/forms";
 @import "partials/scaffolding";
 /*@import "partials/sprite";*/
 /* --- Global styles ---*/
@@ -30,5 +31,7 @@
 @import "views/main";
 @import "views/404";
 @import "views/about";
+@import "views/login";
+@import "views/register";
 /* --- end pages styles ---*/
 

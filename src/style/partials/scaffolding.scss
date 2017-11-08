@@ -24,6 +24,10 @@
   border-bottom: 2px solid $bgColorFour;
 }
 
+.container-fluid--bg {
+  background-color: $bgColorFaq;
+  margin-bottom: 40px;
+}
 
 @media (min-width: $lg-width) {
 

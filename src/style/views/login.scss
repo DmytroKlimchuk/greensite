@@ -1,0 +1,27 @@
+.login-wrapper {
+
+  .container-fluid {
+    margin-bottom: 50px;
+  }
+
+  .list-block__body {
+    padding: 35px 45px;
+  }
+
+  .list-block__head {
+    position: relative;
+  }
+
+}
+
+.forgot-link {
+  display: block;
+  @include font(12px, $colorLabelDark, $font-light);
+  line-height: 20px;
+  text-decoration: underline;
+
+  &:hover {
+    color: $bgColorSecondary;
+  }
+}
+

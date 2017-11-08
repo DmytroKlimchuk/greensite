@@ -89,6 +89,16 @@
         display: none;
       }
     }
+
+    &--live-chat {
+      padding-left: 80px;
+      padding-right: 15px;
+
+      &::before {
+        left: 66px;
+      }
+    }
+
   }
 
 }

@@ -1,0 +1,68 @@
+.close {
+  position: absolute;
+  background: none;
+  border: 0;
+  outline: 0;
+  width: 13px;
+  height: 13px;
+  top: 20px;
+  right: 20px;
+
+  .fa {
+    color: $colorTextInfo;
+    font-size: 14px;
+    font-family: $font-awesome;
+  }
+}
+
+.form-group {
+  margin: 24px 0;
+
+  label {
+    @include font(14px, $colorLabelLight, $font-regular);
+    padding: 9px 24px;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  border: 1px solid $colorFormBorder;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 11px 20px;
+  width: 100%;
+  color: $colorLabelLight;
+}
+
+textarea {
+  min-width: 94px;
+}
+
+.submit {
+  @extend .btn;
+  background-color: $bgColorSecondary;
+  font-family: $font-regular;
+  padding: 20px 30px 20px 45px;
+  &::before {
+    top: 16px;
+    left: 35px;
+  }
+  &:hover {
+    background-color: $btnColorSecondary;
+    border-color: $btnHoverBorderColor;
+  }
+}
+
+@media (min-width: $sm-width) {
+  .submit {
+    padding: 20px 60px 20px 75px;
+    &::before {
+      top: 14px;
+      left: 55px;
+    }
+  }
+}
