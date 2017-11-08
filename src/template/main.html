@@ -1,11 +1,12 @@
-    <main class="main-page">
+<main class="main-page">
     <div class="container-fluid">
         <div class="container">
             <section class="advantages">
                 <h2>Our Advantages</h2>
-                <button class="arrow prev  visible-xs visible-sm"><i class="fa fa-angle-left"></i></button>
-                <div class="advantages__wrapper rslides">
-                    <a href="#" class="advantage advantage--icon1">
+
+                <button class="arrow visible-xs visible-sm"><i class="fa fa-angle-left"></i></button>
+                <div class="carousel-inner advantages__wrapper">
+                    <a href="#" class="advantage advantage--active advantage--icon1 item active">
                         <strong>any academic level</strong>
                     </a>
                     <a href="#" class="advantage advantage--icon2">
@@ -24,7 +25,8 @@
                         <strong>Flexible discount program</strong>
                     </a>
                 </div>
-                <button class="arrow next visible-xs visible-sm"><i class="fa fa-angle-right"></i></button>
+                <button class="arrow visible-xs visible-sm"><i class="fa fa-angle-right"></i></button>
+
             </section>
         </div>
     </div>
@@ -136,22 +138,3 @@
         </div>
     </div>
 </main>
-
-
-<script>
-    $(function() {
-        $(".rslides").responsiveSlides({
-            auto: true,             // Анимация автоматически, true или false
-            speed: 500,            // Скорость смены
-            timeout: 1000,          // Время между переходами
-            pager: false,           // Показывать нумерацию слайдов
-            nav: false,             // Показывать навигацию, true или false
-            random: false,          // Случайный показ слайдов true или false
-            pause: false,           // Пауза при наведении true или false
-            pauseControls: false,    // Пауза при наведении на кнопки навигации
-            prevText: "Previous",   // Текст кнопки "Назад"
-            nextText: "Next",       // Текст кнопки "Следующий"
-            namespace: "rslides"   // класс слайдера
-        });
-    });
-</script>

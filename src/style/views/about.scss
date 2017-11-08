@@ -1,0 +1,61 @@
+.why {
+  padding-top: 50px;
+  margin-bottom: 31px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+/*      list-block      */
+.list-block {
+  padding: 2px;
+  background-color: $bgColorFaq;
+
+  &__head {
+    background-color: $bgColorPrimaryDark;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  &__title {
+    @include font(24px, $colorTextInfo, $font-regular);
+    line-height: 40px;
+    margin: 0;
+  }
+
+  &__body {
+    padding: 33px 54px 55px 27px;
+    font-size: 16px;
+    line-height: 25px;
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &--green {
+    background-color: $bgColorPrimaryLight;
+    color: $colorTextInfo;
+
+    .list-block__body {
+      padding: 19px 36px 19px 10px;
+    }
+
+    ul li::before {
+      color: $colorTextInfo;
+    }
+
+  }
+
+}
+/* end     list-block      */
+
+/*      list-block      */
+/* end     list-block      */

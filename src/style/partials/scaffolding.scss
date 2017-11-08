@@ -23,3 +23,39 @@
 .container-fluid--border {
   border-bottom: 2px solid $bgColorFour;
 }
+
+
+@media (min-width: $lg-width) {
+
+  .headline, .footerline {
+    position: relative;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .headline::before, .footerline::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  .headline::before {
+    left: -70px;
+    background-image: url('../img/header-bee-line.png');
+    width: 639px;
+    height: 273px;
+  }
+
+  .footerline::before {
+    left: -70px;
+    background-image: url('../img/footer-line.png');
+    width: 753px;
+    height: 379px;
+  }
+
+}

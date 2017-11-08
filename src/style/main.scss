@@ -11,6 +11,7 @@
 @import "partials/sprite";
 @import "partials/fonts";
 @import "partials/taxonomie";
+@import "partials/carousel";
 @import "partials/btns";
 @import "partials/scaffolding";
 /*@import "partials/sprite";*/
@@ -25,7 +26,9 @@
 /* --- pages styles ---*/
 @import "views/header";
 @import "views/intro";
-@import "views/main";
 @import "views/footer";
+@import "views/main";
+@import "views/404";
+@import "views/about";
 /* --- end pages styles ---*/
 
