@@ -49,14 +49,16 @@
   }
 
   .headline::before {
-    left: -70px;
+    left:50%;
+    transform: translateX(-750px);
     background-image: url('../img/header-bee-line.png');
     width: 639px;
     height: 273px;
   }
 
   .footerline::before {
-    left: -70px;
+    left:50%;
+    transform: translateX(-753px);
     background-image: url('../img/footer-line.png');
     width: 753px;
     height: 379px;
