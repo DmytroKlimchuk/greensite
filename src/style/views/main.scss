@@ -2,7 +2,6 @@
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 0;
-  list-style-type: none;
 }
 
 .advantages {
@@ -199,27 +198,17 @@
 
 
 @media (max-width: $only-mobile-width) {
-  .advantages {
-    position: relative;
-  }
 
-  .advantages__wrapper {
-    transition: 1s;
-    list-style: none;
+  .advantage__item {
+    overflow: hidden;
   }
 
   .advantage {
     height: 225px;
     background-position: center 56px;
     padding-top: 135px;
-    -webkit-backface-visibility: hidden;
-    width: 100%;
-
-    &:first-child {
-      position: relative;
-      display: block;
-      float: left;
-    }
+    display: block;
+    float: none;
 
     strong {
       @include font(24px,$bgColorPrimaryGrey,400,$font-regular);
@@ -227,40 +216,12 @@
       line-height: 1;
     }
 
+    &--active {
+
+    }
+
   }
 
-  .rslides {
-    position: relative;
-    list-style: none;
-    overflow: hidden;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .rslides li {
-    -webkit-backface-visibility: hidden;
-    position: absolute;
-    display: none;
-    list-style: none;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-
-  .rslides li:first-child {
-    position: relative;
-    display: block;
-    float: left;
-  }
-
-  .rslides img {
-    display: block;
-    height: auto;
-    float: left;
-    width: 100%;
-    border: 0;
-  }
 
    .arrow {
     background-color: transparent;
