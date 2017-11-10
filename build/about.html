@@ -8,15 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
 
     <script>
         $(document).ready(function(){
-            $('.slider').bxSlider();
+
+
+            var slider = $('.slider');
+            var sld = function() {
+                if ($(window).width() < 991) {
+
+                    slider.bxSlider();
+                } else {
+                    slider.destroySlider();
+                }
+            };
+            sld();
+            $(window).resize(sld);
+
+
         });
     </script>
 
-    <link rel="stylesheet" href="css/main.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -59,8 +73,8 @@
             <button class="btn-menu" type="button"></button>
             <nav class="menu">
                 <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">ABOUT</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="about.html">ABOUT</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">SERVICE & SPriCES</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">HOw it works</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Discounts</a></li>
@@ -69,7 +83,7 @@
                     <li class="menu__item"><a class="menu__link" href="#">Tesimonials</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Blog</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Samples</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Login</a></li>
+                    <li class="menu__item"><a class="menu__link" href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -237,7 +251,7 @@
             <div class="row top-footer">
                 <div class="col-md-4 col-lg-3">
                     <div class="footer-logo">
-                        <img src="img/logo2.png" alt="Лого">
+                        <img src="img/logo.png" alt="Лого">
                     </div>
                     <div class="footer-info">
                         <p>

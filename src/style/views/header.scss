@@ -164,26 +164,48 @@
   border: none;
   outline: none;
   width: 55px;
-  height: 35px;
+  height: 7px;
   position: absolute;
   top: 35px;
   right: 40px;
   padding: 0;
   z-index: 10;
   cursor: pointer;
+  background-color: $colorHeaders;
 
-  &::before {
+
+  &::before, &::after {
+    position: absolute;
     content: "";
     background-color: $colorHeaders;
     width: 55px;
     height: 7px;
-    position: absolute;
-    top: 0px;
     left: 0;
-    box-shadow: 0 14px 0 0 $colorHeaders,
-    0 28px 0 0 $colorHeaders;
   }
 
+  &::before {
+    top: -14px;
+  }
+  &::after {
+    top: 14px;
+  }
+
+}
+
+.btn-menu.menu-on {
+  background-color: transparent;
+}
+
+.btn-menu::after, .btn-menu::before, .btn-menu {
+  transition: all .3s ease-in-out;
+}
+.btn-menu.menu-on::after{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.btn-menu.menu-on::before{
+  transform: rotate(45deg);
+  top: 0;
 }
 
 .menu {

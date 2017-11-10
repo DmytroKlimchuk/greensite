@@ -35,10 +35,14 @@ body.classList.remove('nojs');
 navOpen.addEventListener('click', function(){
     if ( navMain.classList.contains ('menu--opened')) {
         navMain.classList.remove('menu--opened');
+        navOpen.classList.remove('menu-on');
     } else {
         navMain.classList.add('menu--opened');
+        navOpen.classList.add('menu-on');
     }
 });
+
+
 
 
 
