@@ -1,0 +1,263 @@
+.articles {
+  padding-top: 40px;
+}
+
+.post {
+  position: relative;
+  margin-bottom: 50px;
+
+  &__image {
+    margin-bottom: 24px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__info {
+    width: 130px;
+    left: 0px;
+    position: absolute;
+    top: 0;
+  }
+
+  &__date {
+    display: block;
+    background-color: $bgColorSecondary;
+    @include font(15px, $bgColorThird, $font-regular);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    p {
+      color: $bgColorThird;
+      margin: 0;
+    }
+  }
+
+  &__month {
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  &__day {
+    font-size: 24px;
+    display: inline-block;
+  }
+
+  &__comments {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $bgColorPrimaryLight;
+    @include font(11px, $colorTextThird, $font-regular);
+    text-align: center;
+
+    p {
+      margin: 0;
+      display: inline-block;
+
+      &:first-child {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__author {
+    @include font(16px, $colorTextDark, $font-light);
+    line-height: 18px;
+    margin-bottom: 20px;
+
+    strong {
+      font-family: $font-regular;
+    }
+
+  }
+
+  &__title {
+    @include font(36px, $colorHeaders, $font-regular);
+    line-height: 40px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+
+  &__descr {
+    text-align: justify;
+    padding-right: 20px;
+  }
+
+  &__btn {
+    text-align: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &:nth-child(even) {
+
+    .post__author::after {
+      background-color: $borderHowDot;
+    }
+
+  }
+
+}
+
+.pagination {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+
+      &::before {
+        display: none;
+      }
+
+      a {
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        @include font(17px, $colorPagination, 'museo-sans-300');
+        line-height: 26px;
+        min-width: 28px;
+        border: 1px solid $bgColorFaq;
+
+        &.active {
+          background-color: $bgColorSecondary;
+          color: #fff;
+        }
+
+        &.dotted {
+          border-color: transparent;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+@media (max-width: $only-mobile-width) {
+
+  .post {
+    border-bottom: 2px dashed #c0c0c0;
+    padding-bottom: 50px;
+    text-align: center;
+
+    &__author {
+      text-transform: uppercase;
+    }
+
+  }
+
+  .pagination {
+    padding: 20px 0;
+  }
+
+}
+
+@media (min-width: $md-width) {
+  .articles {
+    border: 2px solid $bgColorFaq;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .post {
+
+    &::before {
+      content: '';
+      width: 2px;
+      border-left: 2px dashed #c0c0c0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+    }
+
+    &__info {
+      width: 120px;
+      left: -160px;
+      position: absolute;
+      top: 0;
+    }
+
+    &__month {
+      display: block;
+    }
+
+    &__day {
+      display: block;
+    }
+
+    &__comments {
+      p {
+        display: block;
+      }
+    }
+
+    &__author {
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -18px;
+        transform: translateX(-50%);
+        background-color: $bgColorPrimaryDark;
+        border: 1px solid #333;
+        width: 14px;
+        height: 14px;
+        border-radius: 14px;
+      }
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__btn {
+      text-align: left;
+    }
+  }
+
+
+  .pagination {
+    text-align: right;
+    ul {
+      li {
+        a {
+          @include font(11px, $colorPagination, 'museo-sans-300');
+          line-height: 16px;
+          min-width: 18px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: $lg-width) {
+
+  .post__info {
+    width: 130px;
+    left: -170px;
+  }
+
+}
