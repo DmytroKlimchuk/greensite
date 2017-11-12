@@ -1,0 +1,90 @@
+.discounts {
+  padding-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  &__subtitle {
+    @include font(30px, $bgColorSecondary, $font-regular);
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.discount-label {
+  position: relative;
+  background-color: $bgColorSecondary;
+  text-align: center;
+  border: 1px solid #747171;
+  padding: 40px 20px 40px 125px;
+  margin-bottom: 40px;
+
+  &__info {
+    display: inline-block;
+    @include font (55px, $colorTextInfo, 700, $font-bold);
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.75);
+    color: $colorTextInfo;
+    line-height: 55px;
+    margin: 0;
+
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    background: url('../img/logo-discount.png') no-repeat center center;
+    width: 120px;
+    height: 83px;
+  }
+
+}
+
+.discount {
+  width: 275px;
+  height: 88px;
+  background: url('../img/discount.png') no-repeat center center;
+  text-align: center;
+  padding: 7px 5px 5px 120px;
+  margin-bottom: 25px;
+
+  strong  {
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.75);
+    @include font(55px, $bgColorSecondary, $font-bold);
+    line-height: 55px;
+    display: block;
+  }
+
+  span {
+    @include font(20px, $colorTextDark, $font-regular);
+    line-height: 20px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+}
+
+.discount-info {
+  display: table-cell;
+  vertical-align: middle;
+  height: 88px;
+}
+
+@media (max-width: 500px) {
+  .discount-label {
+    padding-left: 10px;
+    &::before {
+      display: none;
+    }
+  }
+}
+@media (max-width: $only-mobile-width) {
+  .discount {
+    margin: 0 auto;
+  }
+}

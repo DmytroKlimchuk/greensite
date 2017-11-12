@@ -23,10 +23,14 @@
 /* --- end temporary styles ---*/
 
 
-/* --- pages styles ---*/
+/* --- views styles ---*/
 @import "views/header";
 @import "views/intro";
 @import "views/footer";
+/* --- end views styles ---*/
+
+
+/* --- pages styles ---*/
 @import "views/main";
 @import "views/404";
 @import "views/about";
@@ -34,5 +38,6 @@
 @import "views/register";
 @import "views/blog";
 @import "views/post";
+@import "views/discounts";
 /* --- end pages styles ---*/
 
