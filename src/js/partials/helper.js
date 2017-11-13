@@ -2,7 +2,7 @@ window.log = function(param){
     console.log(param);
 };
 
-
+/**********************  footer  ****************************/
 var openFooter = document.querySelector('.keywords__link');
 var keywords = document.querySelector('.keywords');
 
@@ -13,7 +13,9 @@ openFooter.addEventListener('click', function(){
         keywords.classList.add('keywords--opened');
     }
 });
+/**********************end   footer  ****************************/
 
+/**********************  header  ****************************/
 var nav_container = document.querySelector('.nav-container');
 
 window.onscroll = function() {
@@ -24,8 +26,9 @@ window.onscroll = function() {
         nav_container.classList.remove('f-nav');
     }
 }
+/********************** end  header  ****************************/
 
-
+/**********************  menu  ****************************/
 var body = document.querySelector('body');
 var navMain = document.querySelector('.menu');
 var navOpen = document.querySelector('.btn-menu');
@@ -41,7 +44,19 @@ navOpen.addEventListener('click', function(){
         navOpen.classList.add('menu-on');
     }
 });
+/**********************end  menu  ****************************/
 
+/**********************  faq  ****************************/
+$('dl dt').click(function(){
+
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+    }else {
+        $(this).addClass('active');
+    }
+
+});
+/**********************end  faq  ****************************/
 
 
 

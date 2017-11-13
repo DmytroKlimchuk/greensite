@@ -81,6 +81,57 @@ ul li::before {
   color: $bgColorSecondary;
 }
 
+dl {
+  counter-reset: list 0;
+
+  dt {
+    @include font(24px, $colorTextInfo, $font-regular);
+    border: 2px solid $bgColorFaq;
+    background-color: $bgColorPrimaryDark;
+    line-height: 31px;
+    padding: 18px 20px 18px 32px;
+    cursor: pointer;
+
+    &::before {
+      counter-increment: list;
+      content: counter(list) ". ";
+    }
+  }
+
+  dd {
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+    height: 0;
+    border: 2px solid $bgColorFaq;
+    background-color: $bgColorFaq;
+    margin-bottom: 38px;
+    @include font(16px, $colorTextPrimary,300, $font-light);
+    line-height: 25px;
+    margin-left: 0;
+    transition: all 0.5s linear;
+    transition-delay: 1;
+
+    * {
+      @include font(16px, $colorTextPrimary,300, $font-light);
+      line-height: 25px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  dt.active + dd  {
+    padding: 33px 54px 38px;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+
+}
+
+
 @media (max-width: $only-mobile-width) {
   ul {
     padding-left: 20px;
