@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cool Green Site</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script>
+        $(document).ready(function(){
+
+
+            var slider = $('.slider');
+            var sld = function() {
+                if ($(window).width() < 991) {
+
+                    slider.bxSlider();
+                } else {
+                    slider.destroySlider();
+                }
+            };
+            sld();
+            $(window).resize(sld);
+
+
+        });
+    </script>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="nojs">
+
+<header class="page-header">
+    <div class="container-fluid container-fluid--darkgreen">
+        <div class="container top-info">
+            <div class="row hidden-xs">
+                <div class="col-sm-7 col-md-9">
+                    <div class="phone">
+                        <div class="phone__item">
+                            <span class="phone__title phone__title--free">Toll for free:</span>
+                            <a href="tel:+1-(044)-147-0235">+1-(044)-147-0235</a>
+                        </div>
+                        <div class="phone__item hidden-sm">
+                            <span class="phone__title phone__title--now">Call now:</span>
+                            <a href="tel:+1-(044)-147-0336">+1-(044)-147-0336</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-md-3">
+                    <div class="social">
+                        <span class="social__title">Join us:</span>
+                        <a href="#" class="social__link social__link--pn"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#" class="social__link social__link--tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social__link social__link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid nav-container">
+        <div class="container main-header">
+            <a href="/" class="logo"><img src="img/logo.png" alt="крутой логотип Greensite"></a>
+            <button class="btn-menu" type="button"></button>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="about.html">ABOUT</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">SERVICE & SPriCES</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">HOw it works</a></li>
+                    <li class="menu__item"><a class="menu__link" href="discounts.html">Discounts</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Order now</a></li>
+                    <li class="menu__item"><a class="menu__link" href="faq.html">FAQ</a></li>
+                    <li class="menu__item"><a class="menu__link" href="testimonials.html">Tesimonials</a></li>
+                    <li class="menu__item"><a class="menu__link" href="blog.html">Blog</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Samples</a></li>
+                    <li class="menu__item"><a class="menu__link" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="testimonials-wrapper">
+    <div class="container-fluid container-fluid--ligtgreen headline">
+        <div class="container">
+            <div class="row">
+                <p class="page-title">testimonials</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+
+            <section class="testimonials">
+                <h2>What our customer says?</h2>
+
+                <div class="row">
+                    <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+
+                        <div class="links-wrapper clearfix">
+
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href=""><i class="fa fa-angle-left"></i></a></li>
+                                    <li><a href="" class="active">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li>
+                                    <li><a href="">4</a></li>
+                                    <li><a href="">5</a></li>
+                                    <li><a href="" class="dotted">...</a></li>
+                                    <li><a href="">6</a></li>
+                                    <li><a href=""><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="btn post__btn">Leave Reply</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p class="testimonial__body">
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p>
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p>
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p>
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p>
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p>
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="testimonial">
+                            <blockquote>
+                                <p>
+                                    We, here at the university, would like to thank you for your exemplary work. It was recently brought to our attention that a number of our humanities professors were purchasing work from your website to use in their classes for students to observe what a perfect paper looks like. After careful examination of the materials, our committee has concluded that this practice can prove to be quite beneficial to our students. We have observed nothing but perfect work from CompanyName.com.
+                                </p>
+                                <footer>
+                                    <cite>Dr. Patricia Lolland, Houston, TX</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+
+                        <div class="links-wrapper clearfix">
+
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href=""><i class="fa fa-angle-left"></i></a></li>
+                                    <li><a href="" class="active">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li>
+                                    <li><a href="">4</a></li>
+                                    <li><a href="">5</a></li>
+                                    <li><a href="" class="dotted">...</a></li>
+                                    <li><a href="">6</a></li>
+                                    <li><a href=""><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+
+
+                        <div class="list-block list-block--green">
+                            <div class="list-block__head">
+                                <p class="list-block__title">Leave Your Reply</p>
+                            </div>
+                            <div class="list-block__body">
+                                <form action="#" method="post">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Your name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <input type="text" name="name" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                             <label>Comments</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <textarea name="comments" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-4">
+                                            <div class="form-group">
+                                                <label>Your mark</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-md-8">
+                                            <div class="form-group">
+                                                <div class="stars">
+                                                    <span class="stars__icon stars__icon--gold"></span>
+                                                    <span class="stars__icon"></span>
+                                                    <span class="stars__icon"></span>
+                                                    <span class="stars__icon"></span>
+                                                    <span class="stars__icon"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group align-right">
+                                                <button class="submit" type="submit" name="send">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer">
+    <div class="container-fluid container-fluid--darkgreen  hidden-sm hidden-xs">
+        <div class="container">
+            <div class="row top-footer">
+                <div class="col-md-4 col-lg-3">
+                    <div class="footer-logo">
+                        <img src="img/logo.png" alt="Лого">
+                    </div>
+                    <div class="footer-info">
+                        <p>
+                            <span class="">Call for free:</span>
+                            <a href="tel:+1-(044)-147-0235">+1-(044)-147-0235</a>
+                        </p>
+                        <p>
+                            <span class="">Email: </span>
+                            <a href="mailto:companyname@gmail.com">companyname@gmail.com</a>
+                        </p>
+                        <p>
+                            <span class="">Email: </span>
+                            <a href="mailto:companyname@gmail.com">companyname@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-9  hidden-sm hidden-xs">
+                    <div class="keywords">
+                        <div class="keywords__body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>
+                        </div>
+                        <button class="keywords__link"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container-fluid--dark footerline">
+        <div class="container ">
+            <div class="sub-footer">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 hidden-sm hidden-xs">
+                        <div class="social">
+                            <span class="social__title">Join us:</span>
+                            <a href="#" class="social__link social__link--pn"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" class="social__link social__link--tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" class="social__link social__link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-lg-9 col-xs-12">
+                        <p class="copyright">
+                            Copyright © 2016 CompanyName.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
