@@ -45,7 +45,7 @@
   &::before {
     content: '';
     position: absolute;
-    bottom: -24px;
+    bottom: -20px;
     left: 45px;
     border-top: 12px solid $bgColorFaq;
     border-left: 12px solid $bgColorFaq;
@@ -89,18 +89,36 @@
 
 }
 
+
 .stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  position: relative;
+  padding: 9px 0;
+
   &__icon {
+    padding: 0 ;
+    margin-right: 3px;
     display: inline-block;
+    @include sprite($s-star);
     width: 10px;
     height: 10px;
-    @include sprite($s-star);
-
-    &--gold {
-      @include sprite($s-star-gold);
-    }
-
+    cursor: pointer;
   }
+
+  input {
+    position: absolute;
+    left: -9999px;
+    clip:rect(0,0,0,0);
+  }
+
+  .stars__icon:hover,
+  .stars__icon:hover~label,
+  input:checked+label,
+  input:checked~label {
+    @include sprite($s-star-gold);
+  }
+
 }
 
 @media (max-width: $only-mobile-width) {
