@@ -1,0 +1,178 @@
+.order {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__title {
+    background-color: $bgColorPrimaryDark;
+    @include font (30px, $colorTextInfo, 400, $font-regular);
+    line-height: 41px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .field {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .error {
+    border: 1px solid $bgColorSecondary;
+    background-color: $colorError;
+  }
+
+  input:active,
+  input:focus {
+   border: 1px solid $colorFocusBorder;
+    background-color: $colorFocusBg;
+    outline: 0;
+  }
+
+  label {
+    display: inline-block;
+    line-height: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include font(14px, #000, 400, $font-regular);
+
+    sup {
+      color: $bgColorSecondary;
+      font-size: 12px;
+    }
+  }
+
+  .tooltip {
+    top: 11px;
+    right: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $bgColorSecondary;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: relative;
+      @include sprite($s-question);
+    }
+
+    &__text {
+      transition: all 0.3s linear;
+      border: 1px solid $bgColorPrimaryLight;
+      text-align: justify;
+      @include font(12px, #000, 400, $font-regular);
+      line-height: 14px;
+      visibility: hidden;
+      opacity: 0;
+      width: 200px;
+      background-color: $bgTooltip;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      right: 17px;
+      top: 7px;
+    }
+
+    &:hover .tooltip__text {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .total-red {
+    @include font(14px, $bgColorSecondary, 400, $font-regular);
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+
+  .lite {
+    @include font(12px, $bgColorPrimaryGrey, 400, $font-regular);
+    line-height: 20px;
+  }
+
+  button{
+    display: inline-block;
+    border: 2px solid $bgColorPrimaryDark;
+    @include font(14px, $bgColorPrimaryDark, 400, $font-regular);
+    line-height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: transparent;
+
+    &.add::before{
+      content: '';
+      position: relative;
+      margin-right: 5px;
+      @include sprite($s-add);
+    }
+
+  }
+
+  .field .cancel{
+    padding: 0;
+    border: 0;
+    line-height: 0;
+    top: 11px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $bgColorSecondary;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: relative;
+      @include sprite($s-cancel);
+    }
+  }
+
+  .file_upload > button{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .total {
+    border: 2px solid $bgColorPrimaryDark;
+    @include font(18px, $bgColorPrimaryGrey, 400, $font-regular);
+    line-height: 20px;
+    padding: 10px;
+
+    span {
+      @include font(18px, $bgColorSecondary, 400, $font-regular);
+    }
+  }
+
+  .btn-wrapper {
+    text-align: left;
+  }
+
+}
+
+@media (max-width: $only-mobile-width) {
+  .order  {
+
+    .field {
+      margin-bottom: 0;
+    }
+
+    .tooltip {
+      display: inline-block;
+      position: relative;
+      left: 5px;
+      right: auto;
+      top: 0;
+    }
+
+    .add {
+      margin-top: 20px;
+    }
+
+  }
+
+}
