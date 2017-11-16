@@ -1,0 +1,106 @@
+.sample {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .row--dashed {
+    border-bottom: 1px dashed $colorTextPrimary;
+    padding-bottom: 25px;
+  }
+
+  .row--second {
+    padding-top: 15px;
+  }
+
+  .btn-wrapper {
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    background-color: $bgColorPrimaryDark;
+    @include font(24px, $colorTextInfo, 400, $font-regular);
+    line-height: 40px;
+    padding: 15px 10px 15px 50px;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+
+  }
+
+  &__icon-wrap {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__icon {
+    @include sprite($s-pdf);
+  }
+
+}
+
+.list {
+
+  .row {
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    &:nth-child(even) {
+      background-color: $bgColorFaq;
+    }
+
+    span {
+      @include font(15px, $colorTextPrimary, 300, $font-light);
+      line-height: 25px;
+      display: inline-block;
+    }
+  }
+
+  .lite {
+    @include font(12px, $colorTextPrimary, 300, $font-light);
+    line-height: 24px;
+    margin: 0;
+  }
+
+  &__price {
+    @include font(18px, $colorTextPrimary, 300, $font-light);
+    line-height: 25px;
+    margin: 0;
+    
+    &--green {
+      color: $bgColorPrimaryExtraLight;
+    }
+
+    &--red {
+      color: $bgColorSecondary;
+    }
+  }
+
+  .discount {
+    @include sprite($s-discount-label);
+    text-align: center;
+    padding: 2px 2px 2px 65px;
+    margin-bottom: 0px;
+
+    strong  {
+      text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.75);
+      @include font(16px, $bgColorSecondary, $font-bold);
+      line-height: 16px;
+      display: block;
+    }
+
+    span {
+      @include font(12px, $colorTextDark, $font-regular);
+      line-height: 12px;
+      text-transform: uppercase;
+      display: block;
+    }
+
+  }
+
+}

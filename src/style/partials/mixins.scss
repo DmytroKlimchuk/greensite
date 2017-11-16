@@ -33,3 +33,16 @@
   @include sprite-width($sprite);
   @include sprite-height($sprite);
 }
+
+
+@mixin notebook() {
+  @media only screen and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
