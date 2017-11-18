@@ -2,13 +2,19 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  .row {
+    order: 1;
+  }
+
   .row--dashed {
     border-bottom: 1px dashed $colorTextPrimary;
     padding-bottom: 25px;
+    order: 2;
   }
 
   .row--second {
     padding-top: 15px;
+    order: 3;
   }
 
   .btn-wrapper {
@@ -27,10 +33,18 @@
     line-height: 40px;
     padding: 15px 10px 15px 50px;
     margin-bottom: 15px;
+    margin-left: -45px;
+    margin-right: -45px;
   }
 
   &__item {
-
+    border: 1px solid $colorTextSelect;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   &__icon-wrap {
@@ -42,9 +56,40 @@
     @include sprite($s-pdf);
   }
 
+  .discount {
+    width: 145px;
+    height: 46px;
+    background-size: contain;
+    padding: 2px 2px 2px 60px;
+    margin-bottom: 25px;
+
+    strong  {
+      @include font(26px, $bgColorSecondary,400, $font-bold);
+      line-height: 28px;
+    }
+
+    span {
+      @include font(12px, $colorTextDark, 400, $font-regular);
+      line-height: 12px;
+    }
+  }
+
+  .get-discount {
+    display: inline-block;
+    line-height: 46px;
+  }
+
+
+  .lite {
+    @include font(12px, $colorTextPrimary, 300, $font-light);
+    line-height: 24px;
+    margin: 0;
+  }
+
 }
 
 .list {
+  margin-left: 40px;
 
   .row {
     padding-top: 7px;
@@ -61,11 +106,7 @@
     }
   }
 
-  .lite {
-    @include font(12px, $colorTextPrimary, 300, $font-light);
-    line-height: 24px;
-    margin: 0;
-  }
+
 
   &__price {
     @include font(18px, $colorTextPrimary, 300, $font-light);
@@ -81,24 +122,86 @@
     }
   }
 
-  .discount {
-    @include sprite($s-discount-label);
-    text-align: center;
-    padding: 2px 2px 2px 65px;
-    margin-bottom: 0px;
+}
 
-    strong  {
-      text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.75);
-      @include font(16px, $bgColorSecondary, $font-bold);
-      line-height: 16px;
-      display: block;
+@media (max-width: $only-mobile-width) {
+
+  .sample {
+
+    .btn-wrapper {
+      margin-left: 15%;
+      margin-right: 15%;
     }
 
-    span {
-      @include font(12px, $colorTextDark, $font-regular);
-      line-height: 12px;
-      text-transform: uppercase;
-      display: block;
+    .sample__item {
+      background-color: $bgColorY;;
+    }
+
+    .get-discount {
+      line-height: 1.2;
+    }
+
+    .row--dashed {
+      border: 0;
+      order: 3;
+    }
+
+    .row--second {
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .list {
+      margin-bottom: 30px;
+      margin-left: 0;
+    }
+
+    .c1 {
+      order: 1;
+    }
+    .c2 {
+      order: 4;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .c3 {
+      order: 2;
+    }
+    .c4 {
+      order: 3;
+    }
+
+  }
+
+}
+
+
+@media (max-width: $sm-width) {
+
+  .sample {
+
+    .sample__title {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .sample__item {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .c1 {
+      order: 1;
+    }
+    .c2 {
+      order: 2;
+    }
+    .c3 {
+      order: 3;
+    }
+    .c4 {
+      order: 4;
     }
 
   }
