@@ -1,0 +1,197 @@
+.profile-wrapper {
+  .btn-wrapper {
+    text-align: center;
+    background-color: $bgColorFaq;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.info-bar {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  p {
+    text-align: center;
+    margin: 0;
+    @include font(15px, $bgColorPrimaryGrey, 400, $font-regular);
+    line-height: 18px;
+  }
+
+  a {
+    font-weight: bold;
+    display: inline-block;
+    color: $bgColorPrimaryGrey;
+  }
+
+  &__name {
+    color: $bgColorPrimaryExtraLight;
+    text-transform: uppercase;
+  }
+}
+
+.user-menu {
+  background-color: $bgColorPrimaryDark;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  text-align: center;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 20px;
+    border-right: 2px solid $colorTextInfo;
+
+    &:before {
+      display: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      border: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    @include font (14px, $colorTextInfo, 700, $font-bold);
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-right: 20px;
+
+    &:hover {
+      color: $colorTextInfo;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+  }
+
+}
+
+.profile-form {
+  padding-top: 35px;
+
+  .form-group {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.myprofile {
+  padding: 30px 30px 5px 30px;
+  border: 1px solid #ccc;
+
+  label {
+    @include font(14px, #000, 400, $font-regular);
+    line-height: 24px;
+    display: block;
+    padding: 0;
+  }
+
+  input[type="checkbox"]~label {
+    display: inline;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
+
+.orders-box {
+  padding-top: 35px;
+}
+
+.orders {
+  padding: 30px 20px;
+  border: 1px solid #ccc;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.table {
+  border: 1px solid #dddcd9;
+  margin-bottom: 20px;
+
+  table {
+    width: 100%;
+
+    th {
+      background-color: $bgColorPrimaryDark;
+      @include font(16px, $colorTextInfo, 400, $font-regular);
+      line-height: 20px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: center;
+    }
+
+    td {
+      background-color: $bgColorFaq;
+      @include font(14px, #000, 400, $font-regular);
+      line-height: 20px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-align: center;
+
+      a {
+        color: $bgColorPrimaryExtraLight;
+      }
+    }
+  }
+
+  &__summary {
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    span {
+      @include font(14px, $bgColorPrimaryExtraLight, 400, $font-regular);
+      line-height: 20px;
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: $only-mobile-width) {
+
+  .info-bar p {
+    margin-bottom: 15px;
+  }
+
+  .user-menu__item {
+    display: block;
+    border: 0;
+    margin-bottom: 15px;
+  }
+  
+  .myprofile, .table {
+    background-color: $bgColorY;
+  }
+
+  .table h3{
+    margin-top: 20px;
+  }
+
+  .table__summary span{
+    color: $bgColorPrimaryDark;
+  }
+
+  .orders {
+    padding: 0;
+  }
+
+}
