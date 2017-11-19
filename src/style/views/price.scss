@@ -1,0 +1,135 @@
+.price {
+  padding-top: 50px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .number {
+    font-size: 0;
+    vertical-align: top;
+
+    span {
+      vertical-align: top;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      height: 40px;
+      width: 40px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .minus {
+      &::before {
+        @include sprite($s-minus);
+      }
+    }
+
+    .plus {
+      background-color: $bgColorPrimaryDark;
+      color: $colorTextInfo;
+
+      &::before {
+        @include sprite($s-plus);
+      }
+    }
+
+    &__input{
+      text-align: center;
+      vertical-align: top;
+      display: inline-block;
+      border: 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      height: 40px;
+      width: 70px;
+    }
+  }
+
+}
+
+.filter {
+
+  &__name {
+    display: block;
+    @include font(14px, #000, 400, $font-regular);
+    line-height: 20px;
+  }
+
+  &__currency {
+    font-size: 0;
+
+    input {
+      position: absolute;
+      left: -9999px;
+      clip:rect(0,0,0,0);
+    }
+
+    input[type="radio"]+label {
+      display: inline-block;
+      @include font(14px, $colorTextCurrency, 400, $font-regular);
+      text-transform: uppercase;
+      line-height: 40px;
+      border: 1px solid #ccc;
+      margin: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked+label {
+      color: $colorTextInfo;
+      background-color: $bgColorPrimaryDark;
+    }
+  }
+
+  &__product {
+
+    select {
+      @include font(14px, $colorTextInput, 400, $font-regular);
+      line-height: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .rf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .c1 {
+      order: 1;
+    }
+    .c2 {
+      order: 2;
+    }
+    .c3 {
+      order: 3;
+    }
+  }
+
+}
+
+@media (max-width: $only-mobile-width) {
+  .filter {
+    .rf {
+      .c2 {
+        display: block;
+        order: 3;
+      }
+      .c3 {
+        order: 2;
+      }
+    }
+  }
+}
+
+
