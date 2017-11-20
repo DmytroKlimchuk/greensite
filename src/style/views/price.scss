@@ -1,3 +1,15 @@
+.price-wrapper {
+
+  .btn-wrapper {
+    background-color: $bgColorFaq;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+  }
+
+}
+
 .price {
   padding-top: 50px;
 
@@ -8,10 +20,11 @@
   .number {
     font-size: 0;
     vertical-align: top;
+    position: relative;
 
     span {
+      position: absolute;
       vertical-align: top;
-      position: relative;
       display: inline-block;
       text-align: center;
       height: 40px;
@@ -28,12 +41,14 @@
     }
 
     .minus {
+      left: 0;
       &::before {
         @include sprite($s-minus);
       }
     }
 
     .plus {
+      right: 0;
       background-color: $bgColorPrimaryDark;
       color: $colorTextInfo;
 
@@ -50,15 +65,17 @@
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
       height: 40px;
-      width: 70px;
+      width: 100%;
     }
   }
 
 }
 
 .filter {
+  margin-bottom: 30px;
 
   &__name {
+    text-align: left;
     display: block;
     @include font(14px, #000, 400, $font-regular);
     line-height: 20px;
@@ -118,6 +135,52 @@
 
 }
 
+
+.price-table {
+  margin-bottom: 40px;
+  border: 1px solid $borderAdv;
+  font-size: 0;
+
+  &__head {
+    border-right: 1px solid $borderAdv;
+    display: inline-block;
+    width: 215px;
+  }
+
+  &__body {
+    display: inline-block;
+    width: calc(100% - 215px);
+  }
+
+  &__title {
+    text-wrap: none;
+    background-color: $bgColorPrimaryDark;
+    @include font(16px, $colorTextInfo, 400, $font-regular);
+    line-height: 70px;
+    text-align: center;
+  }
+
+  &__value {
+    @include font(14px, $colorTextFour, 400, 'opensans-regular');
+    line-height: 40px;
+    text-align: center;
+
+    &:nth-child(odd) {
+      background-color: $bgColorFaq;
+    }
+  }
+
+  &__slide {
+    width: 20%;
+    display: inline-block;
+    border-right: 1px solid $borderAdv;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+}
+
 @media (max-width: $only-mobile-width) {
   .filter {
     .rf {
@@ -129,6 +192,110 @@
         order: 2;
       }
     }
+  }
+
+  .list-block {
+    margin-bottom: 30px;
+  }
+
+  .price-table__body {
+    width: 50%;
+  }
+
+  .price-table__head {
+    width: 50%;
+    float: left;
+  }
+
+  .price-wrapper {
+
+    .price-table__body {
+      position: relative;
+
+      .bx-prev, .bx-next {
+        position: absolute;
+        top: 0;
+        width: 25px;
+        height: 40px;
+        line-height: 70px;
+        text-align: center;
+
+        &::before {
+          font-family: $font-awesome;
+          color: $colorTextInfo;
+          font-size: 38px;
+        }
+
+      }
+
+      .bx-prev {
+        left: 0;
+        &::before {
+          content: "\f104";
+        }
+      }
+
+      .bx-next {
+        right: 0;
+        &::before {
+          content: "\f105";
+        }
+       }
+    }
+
+  }
+
+  .price-table {
+    padding-top: 2px;
+    border: 1px solid $bgColorY;
+    background-color: $bgColorY;
+
+    &__head {
+      border: 0;
+    }
+    &__slide {
+      border: 0;
+    }
+  }
+
+}
+
+@media (min-width: $only-mobile-width) {
+  .price-wrapper {
+
+    .h100 {
+      display: flex;
+      margin-bottom: 60px;
+
+      div:first-child {
+        align-items: stretch;
+      }
+
+      .list-block {
+        height: 100%;
+      }
+
+    }
+
+  }
+}
+
+@media (max-width: 350px) {
+  .price-wrapper {
+
+    .filter {
+
+      &__currency {
+
+        input[type="radio"]+label {
+
+          padding-left: 10px;
+          padding-right: 10px;
+
+        }
+      }
+    }
+
   }
 }
 
