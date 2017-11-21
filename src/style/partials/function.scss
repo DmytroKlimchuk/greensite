@@ -1,0 +1,3 @@
+@function convertToRem($px) {
+  @return ($px/$base-font) * 1rem;
+}

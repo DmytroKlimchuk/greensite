@@ -1,3 +1,7 @@
+html {
+  font-size: $base-font;
+}
+
 body {
   @include font(14px, $colorTextPrimary, 400, $font-regular);
   max-width: 1920px;

@@ -1,5 +1,5 @@
 @mixin font($font-size:14px, $font-color:$colorTextPrimary, $font-weight:400, $font-family: $font-regular) {
-  font-size: $font-size;
+  font-size: convertToRem($font-size);
   color: $font-color;
   font-weight: $font-weight;
   font-family: $font-family;
