@@ -1,0 +1,102 @@
+@if $theme-default == $theme1 {
+
+  $bgColorPrimaryDark: #1158a8;
+  $bgColorPrimaryLight: #2bb3ea;
+  $bgColorPrimaryExtraLight: #0bb3dc;
+  $bgColorPrimaryGrey: #4e4e4e;
+  $bgColorSecondaryGrey: #ccd3dd;
+  $bgColorSecondary: #0dd3e8;
+  $bgColorThird: #f6f6f6;
+  $bgColorFour: #3a44c7;
+  $bgColorFaq: #eaedf2;
+  $borderAdv: #ccc;
+  $borderHow: #666;
+  $borderHowDot: #98f2ef;
+  $bgColorY: #54dad6;
+  $bgTooltip: #fafafa;
+  /*------------- Text -------------------*/
+  $colorHeaders: #0805a8;
+  $colorTextDark: $bgColorPrimaryGrey;
+  $colorTextPrimary: #777777;
+  $colorTextSecondary: #002157;
+  $colorTextThird: #2a396a;
+  $colorTextFour: #343434;
+  $colorTextHint: #cfd0d3;
+  $colorTextCurrency: #292929;
+  $colorTextInput: #9fa1a2;
+  $colorTextSelect: #939191;
+  $colorLabelDark: #000;
+  $colorLabelLight: #242425;
+  $colorLabelLightSecond: #9fa1a2;
+  $colorPagination: #535155;
+  $colorTextInfo: #fff;
+  /*------------- end Text -------------------*/
+
+  /*------------- btns -------------------*/
+  $btnColorSecondary: #fab916;
+  $btnBorderColor: #fff;
+  $btnHoverBorderColor: #002157;
+  $colorFormBorder: #8a8585;
+  $colorError: #fdedeb;
+  $colorFocusBorder: $bgColorPrimaryDark;
+  $colorFocusBg: $bgColorPrimaryLight;
+  /*------------- end btns -------------------*/
+
+  /*------------- Social -------------------*/
+  $colorSocialPn: $bgColorSecondary;
+  $colorSocialTw: #28c3ff;
+  $colorSocialFb: #496194;
+  /*------------- end Social -------------------*/
+
+}
+@else if $theme-default == $theme2 {
+
+  $bgColorPrimaryDark: #ff2323;
+  $bgColorPrimaryLight: #ea726a;
+  $bgColorPrimaryExtraLight: #dca4a1;
+  $bgColorPrimaryGrey: #4e4e4e;
+  $bgColorSecondaryGrey: #ccd3dd;
+  $bgColorSecondary: #e84837;
+  $bgColorThird: #f6f6f6;
+  $bgColorFour: #c7452c;
+  $bgColorFaq: #eaedf2;
+  $borderAdv: #ccc;
+  $borderHow: #666;
+  $borderHowDot: #f26f50;
+  $bgColorY: #da6b51;
+  $bgTooltip: #fafafa;
+  /*------------- Text -------------------*/
+  $colorHeaders: #0f10a8;
+  $colorTextDark: $bgColorPrimaryGrey;
+  $colorTextPrimary: #777777;
+  $colorTextSecondary: #ff2323;
+  $colorTextThird: #2a396a;
+  $colorTextFour: #343434;
+  $colorTextHint: #cfd0d3;
+  $colorTextCurrency: #292929;
+  $colorTextInput: #9fa1a2;
+  $colorTextSelect: #939191;
+  $colorLabelDark: #000;
+  $colorLabelLight: #242425;
+  $colorLabelLightSecond: #9fa1a2;
+  $colorPagination: #535155;
+  $colorTextInfo: #fff;
+  /*------------- end Text -------------------*/
+
+  /*------------- btns -------------------*/
+  $btnColorSecondary: #fab916;
+  $btnBorderColor: #fff;
+  $btnHoverBorderColor: #002157;
+  $colorFormBorder: #8a8585;
+  $colorError: #fdedeb;
+  $colorFocusBorder: $bgColorPrimaryDark;
+  $colorFocusBg: $bgColorPrimaryLight;
+  /*------------- end btns -------------------*/
+
+  /*------------- Social -------------------*/
+  $colorSocialPn: $bgColorSecondary;
+  $colorSocialTw: #ff6d3a;
+  $colorSocialFb: #496194;
+  /*------------- end Social -------------------*/
+
+}

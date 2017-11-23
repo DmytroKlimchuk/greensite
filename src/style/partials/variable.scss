@@ -1,5 +1,13 @@
 // Variables
 
+//aviables themes
+$theme: default;
+$theme1: blue;
+$theme2: red;
+
+//active theme
+$theme-default: $theme;
+
 //Global
 $only-mobile-width: 991px;
 $sm-width: 768px;
